@@ -19,7 +19,7 @@ const Kupony = ({Tablica}) => {
 
                 Stawka (PLN):
                 <input type="number" placeholder="0.00"></input>
-
+                
             </div>
 
 
