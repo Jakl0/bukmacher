@@ -3,8 +3,8 @@ import React from "react";
 const Kupony = ({Tablica}) => {
     
     return (
-
-        <div className="container">
+        
+        <div className="container kupon">
             <div>
                 <h1>Twój Kupon</h1>
 

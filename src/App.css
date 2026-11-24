@@ -1,0 +1,17 @@
+.container{
+    background-color: #ffb909;
+}
+
+.mainPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nav{
+    
+}
+
+.bukmaching{
+    height:150px ;
+    width: auto;
+}

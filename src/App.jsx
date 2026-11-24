@@ -57,9 +57,12 @@ function App() {
 
     {login === true && 
     <div>
-      <Header/> 
-      <Bukmaching Tablica={Mecze}/>
-      <Kupony Tablica={kupon}/>  
+      <Header/>
+
+      <div className='mainPage' > 
+        <Bukmaching Tablica={Mecze}/>
+        <Kupony Tablica={kupon}/>
+      </div>  
     </div> 
     
     

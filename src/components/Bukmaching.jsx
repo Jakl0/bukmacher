@@ -3,10 +3,10 @@ import React from "react";
 const Bukmaching = ({Tablica}) =>{
 
     return(
-        <>
+        <div>
             {
                 Tablica.map((mecz) => (
-                    <div>
+                    <div className="container bukmaching">
                         {mecz.Klub1} VS {mecz.Klub2}
 
                         <button>{mecz.Kurs1}</button>
@@ -15,7 +15,7 @@ const Bukmaching = ({Tablica}) =>{
 
                     </div>
             ))}
-        </>
+        </div>
     )
 
 }
