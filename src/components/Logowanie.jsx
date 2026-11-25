@@ -9,14 +9,15 @@ const Logowanie = ({Zaloguj}) => {
     }
 
     return(
-        <div className="container">
+        <div className="container login">
             <div>
-                <h1>
+                
+                <form onSubmit={(e) =>Login(e)}>
+                    <h1>
                     Logowanie
                 </h1>
-                <form onSubmit={(e) =>Login(e)}>
-                    <input type="text"/>
-                    <input type="password"/>
+                    <input type="text" placeholder="Nazwa..."/>
+                    <input type="password" placeholder="Hasło..."/>
 
                     <button type="submit">ZALOGUJ</button>
                 </form>

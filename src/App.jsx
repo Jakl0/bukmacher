@@ -50,6 +50,10 @@ function App() {
     const [kupon,setKupon] = useState([]);
     const [stawka,setStawka] = useState("");
 
+    function dodajKurs(nowyKurs){
+      setKupon((prev) => [...prev , nowyKurs]);
+    }
+
   return (
     <>
 
@@ -57,10 +61,10 @@ function App() {
 
     {login === true && 
     <div>
-      <Header/>
+      <Header LogOut={()=>setLogin(false)}/>
 
       <div className='mainPage' > 
-        <Bukmaching Tablica={Mecze}/>
+        <Bukmaching Tablica={Mecze} dodajKurs={()=>dodajKurs()}/>
         <Kupony Tablica={kupon}/>
       </div>  
     </div> 

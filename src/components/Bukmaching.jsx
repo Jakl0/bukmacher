@@ -1,17 +1,18 @@
 import React from "react";
 
-const Bukmaching = ({Tablica}) =>{
+const Bukmaching = ({Tablica,dodajKurs}) =>{
 
     return(
-        <div>
+        <div className="container bukmaching">
             {
                 Tablica.map((mecz) => (
-                    <div className="container bukmaching">
+                    <div className="bettingMenu">
                         {mecz.Klub1} VS {mecz.Klub2}
-
-                        <button>{mecz.Kurs1}</button>
-                        <button>{mecz.Remis}</button>
-                        <button>{mecz.Kurs2}</button>
+                        <div className="bettingNav">
+                        <button className="bukmacherButton" onClick={()=>dodajKurs({...mecz , typ:"1"})}>{mecz.Kurs1}</button>
+                        <button className="bukmacherButton" onClick={()=>dodajKurs({...mecz , typ:"X"})}>{mecz.Remis}</button>
+                        <button className="bukmacherButton" onClick={()=>dodajKurs({...mecz , typ:"2"})}>{mecz.Kurs2}</button>
+                        </div>
 
                     </div>
             ))}
