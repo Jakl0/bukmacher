@@ -52,6 +52,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 20px;
     
 }
 .bettingNav{
@@ -126,7 +127,7 @@ button:hover , .bukmacherButton:hover{
 }
 .kupon button{
      width: 90%;
-     background-color: #ffa109;
+
      border-radius: 10px;
      padding: 10px;
      font-size: 16px;
@@ -149,4 +150,17 @@ button:hover , .bukmacherButton:hover{
     border-bottom: 3px solid black;
     margin: 15px;
     padding: 20px;
+}
+.listElement{
+    padding:6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: lightgrey 1px solid;
+}
+.deleteButton{
+    background-color: red;
+    margin: 5px;
+    height: 35px;
 }

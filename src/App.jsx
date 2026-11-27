@@ -50,8 +50,31 @@ function App() {
     const [kupon,setKupon] = useState([]);
     const [stawka,setStawka] = useState("");
 
+    function zatwierdzZaklad(){
+      setKupon([])
+      setStawka("")
+      alert("Zatwierdzono Kupon");
+    }
+
     function dodajKurs(nowyKurs){
-      setKupon((prev) => [...prev , nowyKurs]);
+      var czyDodac = true
+      if(kupon.length> 0){
+      for(var x = 0;x<kupon.length;x+=1){
+        if(kupon[x].mecz == nowyKurs.mecz){
+          czyDodac = false
+        }
+      }
+      if(czyDodac){
+        setKupon((prev) => [...prev , nowyKurs]);  
+      }
+      }
+      else{
+        setKupon((prev) => [...prev , nowyKurs]);
+      }
+    }
+
+    function usunKurs(mecz){
+      setKupon(kupon.filter((prev)=> prev.mecz !==mecz))
     }
 
   return (
@@ -64,8 +87,8 @@ function App() {
       <Header LogOut={()=>setLogin(false)}/>
 
       <div className='mainPage' > 
-        <Bukmaching Tablica={Mecze} dodajKurs={()=>dodajKurs()}/>
-        <Kupony Tablica={kupon}/>
+        <Bukmaching Tablica={Mecze} dodajKurs={dodajKurs}/>
+        <Kupony usunElement={usunKurs} Tablica={kupon} Stawka={stawka} zmienStawke={setStawka} zatwierdzZaklad={zatwierdzZaklad}/>
       </div>  
     </div> 
     
